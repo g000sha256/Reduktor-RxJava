@@ -1,0 +1,10 @@
+language: java
+
+script: ./gradlew test
+
+after_success: bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r lib/build/reports/cobertura/coverage.xml
+
+branches:
+  only:
+    - 2.x.x
+    - 2.x.x

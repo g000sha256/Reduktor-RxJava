@@ -1,0 +1,27 @@
+apply plugin: "kotlin"
+apply plugin: "maven"
+apply plugin: "net.saliman.cobertura"
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+cobertura {
+    coverageFormats = ["html", "xml"]
+}
+
+dependencies {
+    implementation(lib.jetBrains.annotations) { transitive = false }
+    implementation(lib.jetBrains.kotlin.stdLib) { transitive = false }
+    implementation(lib.jetBrains.kotlin.stdLibCommon) { transitive = false }
+    implementation(lib.reactiveStreams) { transitive = false }
+    implementation(lib.rxJava) { transitive = false }
+
+    testImplementation(libTest.hamcrest) { transitive = false }
+    testImplementation(libTest.jUnit) { transitive = false }
+    testImplementation(libTest.slf4j) { transitive = false }
+}
+repositories {
+    mavenCentral()
+}
+
+test.finalizedBy(project.tasks.cobertura)

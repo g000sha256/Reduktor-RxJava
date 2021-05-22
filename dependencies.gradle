@@ -1,0 +1,23 @@
+ext {
+    final String versionKotlin = "1.5.10"
+    lib = [
+            reactiveStreams: "org.reactivestreams:reactive-streams:1.0.3",
+            rxJava         : "io.reactivex.rxjava2:rxjava:2.2.21",
+            jetBrains      : [
+                    annotations: "org.jetbrains:annotations:21.0.1",
+                    kotlin     : [
+                            stdLib      : "org.jetbrains.kotlin:kotlin-stdlib:$versionKotlin",
+                            stdLibCommon: "org.jetbrains.kotlin:kotlin-stdlib-common:$versionKotlin"
+                    ]
+            ]
+    ]
+    libTest = [
+            hamcrest: "org.hamcrest:hamcrest:2.2",
+            jUnit   : "junit:junit:4.13.2",
+            slf4j   : "org.slf4j:slf4j-api:1.7.30"
+    ]
+    plugin = [
+            cobertura: "net.saliman:gradle-cobertura-plugin:4.0.0",
+            kotlin   : "org.jetbrains.kotlin:kotlin-gradle-plugin:$versionKotlin"
+    ]
+}
