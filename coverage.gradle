@@ -1,0 +1,14 @@
+apply plugin: "jacoco"
+
+jacoco {
+    toolVersion = "0.8.7"
+}
+jacocoTestReport {
+    reports {
+        html.required = true
+        xml.required = true
+    }
+}
+test {
+    finalizedBy jacocoTestReport
+}

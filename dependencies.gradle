@@ -1,0 +1,21 @@
+ext {
+    versionKotlin = "1.5.30"
+    lib = [
+            reactiveStreams: "org.reactivestreams:reactive-streams:1.0.3",
+            rxJava         : "io.reactivex.rxjava2:rxjava:2.2.21",
+            jetBrains      : [
+                    annotations: "org.jetbrains:annotations:22.0.0",
+                    kotlin     : [
+                            stdLib      : "org.jetbrains.kotlin:kotlin-stdlib:$versionKotlin",
+                            stdLibCommon: "org.jetbrains.kotlin:kotlin-stdlib-common:$versionKotlin"
+                    ]
+            ]
+    ]
+    libTest = [
+            hamcrest: "org.hamcrest:hamcrest:2.2",
+            jUnit   : "junit:junit:4.13.2"
+    ]
+    plugin = [
+            kotlin: "org.jetbrains.kotlin:kotlin-gradle-plugin:$versionKotlin"
+    ]
+}
