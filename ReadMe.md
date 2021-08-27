@@ -1,4 +1,4 @@
-# Reduktor (RxJava 2)
+# Reduktor (RxJava 2) (WORK IN PROGRESS)
 
 [![License](https://img.shields.io/static/v1?color=blue&label=License&message=MIT)](https://github.com/g000sha256/Reduktor-RxJava/blob/2.x/License)
 [![JitPack](https://img.shields.io/jitpack/v/github/g000sha256/Reduktor-RxJava?color=brightgreen&label=Version)](https://jitpack.io/#g000sha256/Reduktor-RxJava)
